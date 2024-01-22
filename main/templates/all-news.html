@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="container mt-3 mb-5">
+	<h3 class="border-bottom pb-1 my-4">All News</h3>
+    <!-- News Box -->
+	<section id="popular-courses" class="courses">
+		<div class="container row" data-aos="fade-up">
+	{% for news in twenty_news %}
+	<!-- ================ -->
+	<div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+		<div class="course-item">
+			<img src="/media/{{news.image1}}" class="img-fluid" alt="">
+			<div class="course-content">
+				<h3><a href="">{{ news.slug }}</a></h3>
+			</div>
+		</div>
+	</div>
+    {% endfor %}
+	</div>
+	</section>
+</main>
+{% endblock %}

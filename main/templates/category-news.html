@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="categoryAll container">
+	<h3 class="border-bottom pb-1 my-4" style="text-align: center;">{{category.title}} sahypamyza hoş geldiňiz!</h3>
+    <!-- News Box -->
+    {% for news in all_news %}
+	<div class="card mb-4 shadow">
+	  <div class="d-flex justify-content-between no-gutters">
+	    <div class="col-md-3">
+            <img src="/media/{{news.image}}" alt="{{news.title}}">
+	    </div>
+	    <div class="col-md-8">
+	      <div class="card-body">
+	        <h4 class="card-title">{{news.title}}</h4>
+	        <p class="card-text">{{news.detail}}</p>
+	        <p class="card-text"><a href="/detail/{{news.id}}" class="button">Read Full</a></p>
+	      </div>
+	    </div>
+	  </div>
+    </div>
+    {% endfor %}
+</main>
+{% endblock %}
