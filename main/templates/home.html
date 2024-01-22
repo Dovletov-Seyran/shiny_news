@@ -197,7 +197,7 @@
 								<img src="/media/{{category.image}}" alt="">
 							</div>
 							<div class="card-body">
-								<h5 class="card-title"><a href={% url 'category_news' %}>{{ category.slug }}</a></h5>
+								<h5 class="card-title"><a href={% url 'category_news' category.slug %}>{{ category.name | title }}</a></h5>
 							</div>
 						</div>
 					</div>

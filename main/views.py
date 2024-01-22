@@ -12,9 +12,9 @@ def home(request):
 def detail(request):
     return render(request, 'detail.html')
 
-def category_news(request, pk):
+def category_news(request, slug):
     qs = Category.objects.all()
-    category = get_object_from_qs_or_404(qs, id=pk)
+    category = get_object_from_qs_or_404(qs, slug=slug)
     all_news = category.news.all()
     context = {
         "category": category,
