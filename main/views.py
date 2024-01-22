@@ -1,5 +1,8 @@
 from django.shortcuts import render
+
 from .models import Category, News
+from helpers.shortcuts import get_object_from_qs_or_404
+
 
 def home(request):
     four_categories = Category.objects.all()[0:4]
@@ -9,8 +12,15 @@ def home(request):
 def detail(request):
     return render(request, 'detail.html')
 
-def category_news(request):
-    return render(request, 'category-news.html')
+def category_news(request, pk):
+    qs = Category.objects.all()
+    category = get_object_from_qs_or_404(qs, id=pk)
+    all_news = category.news.all()
+    context = {
+        "category": category,
+        "all_news": all_news
+    }
+    return render(request, 'category-news.html', context)
 
 def all_news(request):
     twenty_news = News.objects.all()[0:21]

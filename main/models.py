@@ -12,7 +12,7 @@ class Category(models.Model):
 
 
     def __str__(self):
-        return self.name
+        return f"{self.id}. {self.name}"
 
 
 class News(models.Model):
