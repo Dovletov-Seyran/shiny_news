@@ -6,7 +6,7 @@ from .views import home, detail, category_news, all_news, about
 
 urlpatterns = [
     path('home/', home, name='home'),
-    path('detail/', detail, name='detail'),
+    path('detail/<str:slug>/', detail, name='detail'),
     path('category_news/<str:slug>/', category_news, name='category_news'),
     path('all_news/', all_news, name='all_news'),
     path('about/', about, name='about'),

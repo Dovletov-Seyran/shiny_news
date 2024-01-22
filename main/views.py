@@ -9,8 +9,13 @@ def home(request):
     context = {'four_categories': four_categories}
     return render(request, 'home.html', context)
 
-def detail(request):
-    return render(request, 'detail.html')
+def detail(request, slug):
+    qs = News.objects.all()
+    news = get_object_from_qs_or_404(qs, slug=slug)
+    context = {
+        "news": news
+    }
+    return render(request, 'detail.html', context)
 
 def category_news(request, slug):
     qs = Category.objects.all()

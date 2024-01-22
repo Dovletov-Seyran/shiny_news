@@ -6,14 +6,14 @@
 		<!-- Left -->
 		<div class="col-md-8">
 			<div class="card mb-3">
-                <img src="/media/{{news.image}}" class="card-img-top" alt="{{news.title}}">
+                <img src="/media/{{news.image1}}" class="card-img-top" alt="{{news.name}}">
 			  <div class="card-body">
 			    <h5 class="card-title">{{news.name}}</h5>
 			    <hr/>
-			    <p class="card-text">{{news.detail}}</p>
+			    <p class="card-text">{{news.description}}</p>
 			  </div>
 			  <div class="card-footer">
-			  	In <a href="/category/{{news.category.id}}">{{news.category.name}}</a>
+			  	In <a href="{% url "category_news" news.category.slug %}">{{news.category.name | title}}</a>
 			  </div>
 			</div>
 		</div>
@@ -23,7 +23,7 @@
 			<!-- Category Box -->
 			<!-- {% for news in related_news %} -->
 			<div class="card mb-3 shadow">
-                <img src="/media/{{news.image}}" class="card-img-top" alt="{{news.title}}">
+                <img src="/media/{{news.image1}}" class="card-img-top" alt="{{news.name}}">
 			  <div class="card-body">
 			    <h5 class="card-title">{{news.name}}</h5>
 			    <hr/>

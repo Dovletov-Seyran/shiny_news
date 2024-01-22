@@ -13,7 +13,7 @@
 	      <div class="card-body">
 	        <h4 class="card-title">{{news.name}}</h4>
 	        <p class="card-text">{{news.description}}</p>
-	        <p class="card-text"><a href="/detail/{{news.id}}" class="button">Read Full</a></p>
+	        <p class="card-text"><a href="{% url "detail" news.slug %}" class="button">Read Full</a></p>
 	      </div>
 	    </div>
 	  </div>
