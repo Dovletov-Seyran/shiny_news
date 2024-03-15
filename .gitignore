@@ -1,3 +1,9 @@
-db.sqlite3
+.env
 venv/
-*__pypcache__/
+db.sqlite3
+*__pycache__
+.DS_Store
+scripts/
+dump.rdb
+media/
+.idea/
