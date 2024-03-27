@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Home Page{% endblock %}</title>
+	<!-- Bootstrap 4 CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bs4/bootstrap.min.css' %}" />
+
+  <!-- Bootstrap icons -->
+
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet">
+
+	<!-- Bootstrap Js -->
+	<script type="text/javascript" src="{% static '/vendor/bs4/bootstrap.min.js' %}"></script>
+    <!-- Main CSS -->
+    <link rel="stylesheet" src="{% static 'vendor/aos/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/css/main.css' %}">
+</head>
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+	<div class="container flexhead d-flex align-items-center justify-content-between">
+    <div class="logo-left">
+		<h1 class="logo me-auto"><a href={% url 'home' %}>Brendýoly</a></h1>
+    </div>
+    <div class="nav-right">
+		<nav id="navbar" class="navbar">
+			<ul>
+				<li><a class="active" href={% url 'home' %}>Esasy sahypa</a></li>
+				<li><a href={% url 'all_news' %}>Ähli täzelikler</a></li>
+				<li class="dropdown"><a href="#"><span>Hyzmatlarymyz</span> <i class="bi bi-chevron-down"></i></a>
+					<ul>
+						<li><a href="#">Gozgalmaýan emläk</a></li>
+						<li class="dropdown"><a href="#"><span>Syýahatçylyk</span></a>
+						</li>
+						<li><a href="#">Terjime Hyzmatlarymyz</a></li>
+						<li><a href="#">Iş agentligi</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Habarlaşmak</a></li>
+			</ul>
+			<i class="bi bi-list mobile-nav-toggle"></i>
+		</nav>
+    </div><!-- .navbar -->
+
+	</div>
+</header>
+    <!-- End Header -->
+
+
+    {% block content %}
+    {% endblock %}
+
+<hr/>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4 footer-contact">
+            <h3>Brendyoly</h3>
+            <p>
+              Görogly köç, 14-51 <br>
+              Aşgabat<br>
+              Türkmenistan <br><br>
+              <strong>Phone:</strong> +993 ** ******<br>
+              <strong>Email:</strong> brendyoly@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-4 footer-links">
+            <h4>Gerekli salgylanmalar</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href={% url 'home' %}>Esasy hasypa</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href={% url 'about' %}>Biz barada</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Hyzmatlar</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-4 footer-links">
+            <h4>Biziň hyzmatlarymyz</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Syýahatçylyk</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Iş/işgär gözlegi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Gozgalmaýan emläk</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terjime hyzmatlary</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start" style="margin-right: auto!important;">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Brendyoly</span></strong>. All Rights Reserved
+        </div>
+        <!-- <div class="credits">
+          Designed by <a href="#">BootstrapMade</a>
+        </div> -->
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+	<script type="text/javascript" src="{% static '/vendor/js/main.js' %}"></script>
+</body>
+</html>
