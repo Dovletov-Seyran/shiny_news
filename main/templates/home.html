@@ -188,10 +188,10 @@
 			<p>Hyzmatlarymyz</p>
 		</div>
 		<section id="events" class="events">
-			<div class="container" data-aos="fade-up">
+			<div class="container" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;" data-aos="fade-up">
 				{% for category in four_categories %}
-				<div class="row">
-					<div class="col-md-3 d-flex align-items-stretch">
+				<div class="">
+					<div class="d-flex align-items-stretch">
 						<div class="card">
 							<div class="card-img">
 								<img src="/media/{{category.image}}" alt="">
