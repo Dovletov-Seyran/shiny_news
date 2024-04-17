@@ -396,7 +396,6 @@ text-decoration: none;
 
 /* Home Main */
 
-
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -808,6 +807,8 @@ section {
 
 .events .card-img img {
   max-width: 100%;
+  min-height: 200px;
+  object-fit: cover;
   transition: all 0.3s ease-in-out;
 }
 
