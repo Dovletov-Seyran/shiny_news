@@ -811,6 +811,11 @@ section {
   object-fit: cover;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 650px) {
+.events .card-img img {
+  min-height: 150px;
+}
+}
 
 .events .card-body {
   z-index: 10;
