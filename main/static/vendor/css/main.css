@@ -860,6 +860,18 @@ section {
   color: #5fcf80;
 }
 
+#events .container {
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px;
+}
+@media (max-width: 650px) {
+  #events .container {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
 /* ========CategoryAll====== */
 .categoryAll {
   margin-top: 7rem;
@@ -881,4 +893,10 @@ section {
 /* =======Details========== */
 .detailContainer {
   margin-top: 7rem;
+}
+
+@media (max-width: 650px) {
+  main {
+    min-height: 75vh;
+  }
 }
