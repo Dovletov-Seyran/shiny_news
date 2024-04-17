@@ -896,6 +896,12 @@ section {
 }
 
 @media (max-width: 650px) {
+  * {
+    font-size: 22px;
+  }
+  #navbar li a {
+    font-size: 30px;
+  }
   main {
     min-height: 75vh;
   }
