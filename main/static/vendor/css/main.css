@@ -403,7 +403,7 @@ text-decoration: none;
 #hero {
   width: 100%;
   height: 80vh;
-  background: url(/media/media/brendyol.banner.jpg) top center;
+  background: url("/media/media/brendyolBanner.jpg") top center;
   background-size: cover;
   position: relative;
 }
@@ -438,7 +438,7 @@ text-decoration: none;
 }
 
 .main_back_span {
-  color: #5fcf80;
+  color: #fff;
 }
 
 #hero h2 {
