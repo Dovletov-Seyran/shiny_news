@@ -403,7 +403,7 @@ text-decoration: none;
 #hero {
   width: 100%;
   height: 80vh;
-  background: url("/media/imgs/main_fon.jpg") top center;
+  background: url(/media/media/brendyol.banner.jpg) top center;
   background-size: cover;
   position: relative;
 }
