@@ -8,6 +8,9 @@
     z-index: 1;
     color: gold;
 }
+#events {
+  margin: 1px;
+}
 
 /* Header */
 #header {
