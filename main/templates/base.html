@@ -25,10 +25,11 @@
 </head>
 <body>
   <style>
-    #hero {
-      background: url(/media/media/brendyolBanner.jpg) no-repeat;
-    background-size: 100% 200%;    }
+
     @media (min-width: 650px) {
+      #hero {
+        height: 50vh;
+      }
       #events .container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -44,6 +45,11 @@
       }
     }
     @media (min-width: 1400px) {
+      #hero {
+      background: url(/media/media/brendyolBanner.jpg) no-repeat;
+    background-size: 100% 200%;    
+    height: 100vh;
+  }
       #events .container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
