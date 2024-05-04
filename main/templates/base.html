@@ -24,6 +24,22 @@
     <link rel="stylesheet" href="{% static 'vendor/css/main.css' %}">
 </head>
 <body>
+  <style>
+    @media (min-width: 650px) {
+      #events .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+    }
+    @media (min-width: 1400px) {
+      #events .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+    }
+  </style>
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
 	<div class="container flexhead d-flex align-items-center justify-content-between">
