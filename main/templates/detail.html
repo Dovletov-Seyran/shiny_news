@@ -14,7 +14,7 @@
 			    <p class="card-text">{{news.description}}</p>
 			  </div>
 			  <div class="card-footer">
-			  	In <a href="{% url "category_news" news.category.slug %}">{{news.category.name | title}}</a>
+			  	Bölüm: <a href="{% url "category_news" news.category.slug %}">{{news.category.name | title}}</a>
 			  </div>
 			</div>
 		</div>
